@@ -10,7 +10,7 @@ import UIKit
 // Accept the Protocol
 class DelegateController: UIViewController {
 
-    @IBOutlet weak var lblDelegate: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     // Implement the protocol
     func writeDatatoLabel(info: String) {

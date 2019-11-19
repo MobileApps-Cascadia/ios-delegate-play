@@ -19,6 +19,7 @@ class DelegatorController:UIViewController {
     
     @IBAction func goButtonPressed() {
         //Call the Delegate's method
+        
     }
 }
 
