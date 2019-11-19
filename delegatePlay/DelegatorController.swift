@@ -18,8 +18,10 @@ class DelegatorController:UIViewController {
     //Add Delegate variable
     
     @IBAction func goButtonPressed() {
-        //Call the Delegate's method
+        //Call the Delegate's method to write the text into its label
         
+        // Return to the previous view
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
