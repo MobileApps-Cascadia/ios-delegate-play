@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2aA-b7-esV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2aA-b7-esV">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Delegate Controller-->
+        <!--Delegate Pattern-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="DelegateController" customModule="delegatePlay" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,13 +22,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swift Delegates Are" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXm-Yy-Ikm">
-                                <rect key="frame" x="94" y="220" width="187" height="27"/>
+                                <rect key="frame" x="94" y="219" width="187" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="......." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwX-oU-XCT">
-                                <rect key="frame" x="171" y="267" width="33" height="21"/>
+                                <rect key="frame" x="171" y="266" width="33" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -44,15 +44,23 @@
                                     <segue destination="hHv-Lj-vnI" kind="show" id="Jot-fH-LR9"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="As the Delegate, I can say" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="675-cU-qRf">
+                                <rect key="frame" x="30.5" y="164" width="314" height="33.5"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.61229804421768708" green="0.73224914965986398" blue="0.093989158163265307" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="XqK-DE-3V0" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="4qr-dj-ImN"/>
                             <constraint firstItem="DwX-oU-XCT" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="5zl-xa-bf5"/>
+                            <constraint firstItem="675-cU-qRf" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="8xa-tx-pXo"/>
                             <constraint firstItem="XqK-DE-3V0" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="Dme-Qg-b0W"/>
+                            <constraint firstItem="675-cU-qRf" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="100" id="F30-tK-ceb"/>
                             <constraint firstItem="DwX-oU-XCT" firstAttribute="top" secondItem="oXm-Yy-Ikm" secondAttribute="bottom" constant="20" id="N4y-7h-46e"/>
+                            <constraint firstItem="XqK-DE-3V0" firstAttribute="top" secondItem="DwX-oU-XCT" secondAttribute="bottom" constant="30" id="gfB-9e-1YK"/>
                             <constraint firstItem="oXm-Yy-Ikm" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="uut-8e-ZGk"/>
-                            <constraint firstItem="oXm-Yy-Ikm" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="-100" id="zep-JB-1sn"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -67,7 +75,9 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="yNs-pL-ZZy"/>
+                    <navigationItem key="navigationItem" title="Delegate Pattern" id="yNs-pL-ZZy">
+                        <barButtonItem key="backBarButtonItem" title="Back to Delegate" id="XsR-tf-HZB"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="lblDelegate" destination="DwX-oU-XCT" id="7n0-I5-Cd6"/>
                     </connections>
@@ -112,6 +122,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="As the Delegator, I can say" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEQ-ub-ONt">
+                                <rect key="frame" x="26" y="164" width="323" height="33.5"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.96617240646258506" blue="0.26538584183673469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -119,6 +135,8 @@
                             <constraint firstItem="HLa-7v-98Y" firstAttribute="leading" secondItem="wpI-WR-62S" secondAttribute="leading" constant="56" id="eVq-Wl-GXp"/>
                             <constraint firstItem="QWC-yV-oQ3" firstAttribute="leading" secondItem="HLa-7v-98Y" secondAttribute="trailing" constant="20" id="jDI-jb-5vT"/>
                             <constraint firstItem="FqO-Qu-trX" firstAttribute="centerX" secondItem="wpI-WR-62S" secondAttribute="centerX" id="klY-KW-EPD"/>
+                            <constraint firstItem="CEQ-ub-ONt" firstAttribute="centerX" secondItem="wpI-WR-62S" secondAttribute="centerX" id="og6-mP-Wf4"/>
+                            <constraint firstItem="CEQ-ub-ONt" firstAttribute="top" secondItem="0TW-Af-5nD" secondAttribute="bottom" constant="100" id="puY-Ki-ZX7"/>
                             <constraint firstItem="QWC-yV-oQ3" firstAttribute="centerY" secondItem="HLa-7v-98Y" secondAttribute="centerY" id="qbg-xH-QHi"/>
                             <constraint firstItem="HLa-7v-98Y" firstAttribute="centerY" secondItem="wpI-WR-62S" secondAttribute="centerY" constant="-90" id="qfc-vb-DXE"/>
                         </constraints>
