@@ -8,9 +8,14 @@
 import UIKit
 
 // Accept the Protocol
-class DelegateController: UIViewController {
+class DelegateController: UIViewController, UseData{
+    func writeToLabel(info: String) {
+        descriptionLabel.text = info
+    }
+    
+    
 
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel! //this is the view label thing
     
     // Implement the protocol
     func writeDatatoLabel(info: String) {
@@ -20,7 +25,9 @@ class DelegateController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //Assign this controller as the Delegate for the destination
-
+        let delegator = segue.destination as!DelegatorController
+        
+        delegator.myDelegate = self
     }
 
 }
