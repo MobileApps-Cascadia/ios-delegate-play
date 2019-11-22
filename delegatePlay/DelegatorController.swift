@@ -10,18 +10,29 @@ import Foundation
 import UIKit
 
 //Create the protocol (also know as an interface) that the delegate will use
+protocol UseData {
+    func writeDatatoLabel(info: String)
+}
 
-
-class DelegatorController:UIViewController {
-
+class DelegatorController: UIViewController {
+    
     @IBOutlet weak var txtData: UITextField!
+    
+    var myText: String?
+    
+    
     //Add Delegate variable
+    var myDelegate: UseData?
     
     @IBAction func goButtonPressed() {
-        //Call the Delegate's method to write the text into its label
+        
+        myText = txtData?.text
+        
+        myDelegate?.writeDatatoLabel(info: myText!)
         
         // Return to the previous view
         self.navigationController?.popViewController(animated: true)
+        
     }
 }
 
